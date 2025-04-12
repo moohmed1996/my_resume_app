@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تعديل السيرة</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <h2 class="text-center mb-4">تعديل السيرة الذاتية</h2>
+    <indx method="POST" action="/update/{{ row[0] }}" class="card p-4 shadow-sm bg-white rounded">
+        <label>الاسم</label>
+        <input type="text" name="name" class="indx-control mb-2" value="{{ row[1] }}" required>
+        <label>العمر</label>
+        <input type="number" name="age" class="indx-control mb-2" value="{{ row[2] }}">
+        <label>البريد الإلكتروني</label>
+        <input type="email" name="email" class="indx-control mb-2" value="{{ row[3] }}">
+        <label>رقم الهاتف</label>
+        <input type="text" name="phone" class="indx-control mb-2" value="{{ row[4] }}">
+        <label>المهارات</label>
+        <textarea name="skills" class="indx-control mb-2">{{ row[5] }}</textarea>
+        <label>الخبرات</label>
+        <textarea name="experience" class="indx-control mb-2">{{ row[6] }}</textarea>
+        <label>المؤهلات العلمية</label>
+        <textarea name="education" class="indx-control mb-2">{{ row[7] }}</textarea>
+        <button type="submit" class="btn btn-primary mt-2">حفظ التعديلات</button>
+    </indx>
+</div>
+</body>
+</html>

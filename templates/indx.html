@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>السيرة الذاتية</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <h2 class="mb-4 text-center">ادخال معلومات السيرة الذاتية</h2>
+
+    <!-- روابط التنقل -->
+    <div class="text-center mb-4">
+        <a href="/" class="btn btn-secondary me-2">الرئيسية</a>
+        <a href="/search" class="btn btn-info">🔍 بحث عن سيرة</a>
+    </div>
+
+    <indx method="POST" action="/resume" class="card p-4 shadow-sm bg-white rounded">
+        <div class="mb-3">
+            <label class="indx-label">الاسم</label>
+            <input type="text" name="name" class="indx-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="indx-label">العمر</label>
+            <input type="number" name="age" class="indx-control">
+        </div>
+        <div class="mb-3">
+            <label class="indx-label">البريد الإلكتروني</label>
+            <input type="email" name="email" class="indx-control">
+        </div>
+        <div class="mb-3">
+            <label class="indx-label">رقم الهاتف</label>
+            <input type="text" name="phone" class="indx-control">
+        </div>
+        <div class="mb-3">
+            <label class="indx-label">المهارات</label>
+            <textarea name="skills" class="indx-control"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="indx-label">الخبرات</label>
+            <textarea name="experience" class="indx-control"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="indx-label">المؤهلات العلمية</label>
+            <textarea name="education" class="indx-control"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">عرض السيرة</button>
+    </indx>
+</div>
+</body>
+</html>
